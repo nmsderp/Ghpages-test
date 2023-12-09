@@ -1,4 +1,4 @@
-name: Run npm run dev with --force
+name: Run npm run dev
 
 on:
   push:
@@ -21,5 +21,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run npm run dev with --force
-        run: npm run dev -- --force
+      - name: Run npm run dev
+        run: npm run dev
