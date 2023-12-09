@@ -1,12 +1,12 @@
-name: Deploy to GitHub Pages
+name: Run npm run dev with --force
 
 on:
   push:
     branches:
-      - main # Change this to your main branch name
+      - main
 
 jobs:
-  build-and-deploy:
+  run-dev:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,12 +21,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          
+      - name: Run npm run dev with --force
+        run: npm run dev -- --force
