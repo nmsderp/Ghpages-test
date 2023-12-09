@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"build": "svelte-kit build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^2.4.3",
